@@ -23,7 +23,8 @@ int main( int argc, char *argv[])
 	while (len--)
 	{
 		printf("0x");
-		printf("%c%c, ", *ptr++, *ptr++);
+		printf("%c", *ptr++);
+		printf("%c,", *ptr++);
 		if (((len % 16)) == 0 && (len != 0))
 			printf("\n");
 	}
