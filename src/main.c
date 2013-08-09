@@ -8,29 +8,29 @@ int main( int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("usage: \n");
-		printf("example 1: ./converter 1122334455\n");
-		printf("example 2: cat file_in | xargs ./converter > file_out\n");
+		printf("usage: \r\n");
+		printf("example 1: ./converter 1122334455\r\n");
+		printf("example 2: cat file_in | xargs ./converter > file_out\r\n");
 		return -1;
 	}
 
 	ptr = argv[1];
 	len = strlen(ptr)/2;
 
-	printf ("length = %d\n\n", len);
+	printf ("length = %d\r\n\r\n", len);
 
-	printf ("{\n");
+	printf ("{\r\n");
 	while (len--)
 	{
 		printf("0x");
 		printf("%c", *ptr++);
 		printf("%c,", *ptr++);
 		if (((len % 16)) == 0 && (len != 0))
-			printf("\n");
+			printf("\r\n");
 	}
 
-	printf("\n");
-	printf("}\n");
+	printf("\r\n");
+	printf("},\r\n");
 
 return 1;
 }
